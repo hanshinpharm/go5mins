@@ -1,0 +1,25 @@
+<%= form_for(@exo) do |f| %>
+  <% if @exo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exo.errors.count, "error") %> prohibited this exo from being saved:</h2>
+
+      <ul>
+      <% @exo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :PrdName %><br>
+    <%= f.text_field :PrdName %>
+  </div>
+  <div class="field">
+    <%= f.label :OwnerName %><br>
+    <%= f.text_field :OwnerName %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
