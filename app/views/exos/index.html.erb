@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <td>No</td>
       <th>Prdname</th>
       <th>Ownername</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @exos.each do |exo| %>
       <tr>
+        <td><%= exo.id-50 %></td>        <!--  땜빵 -->
         <td><%= exo.PrdName %></td>
         <td><%= exo.OwnerName %></td>
         <td><%= link_to 'Show', exo %></td>

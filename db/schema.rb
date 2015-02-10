@@ -11,11 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209090932) do
+ActiveRecord::Schema.define(version: 20150210052721) do
 
   create_table "exos", force: :cascade do |t|
     t.string   "PrdName"
     t.string   "OwnerName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.string   "DateSent"
+    t.string   "DatePage"
+    t.string   "NumEY"
+    t.string   "OrderNo"
+    t.string   "AccCode"
+    t.string   "PrdName"
+    t.string   "OwnerName"
+    t.string   "PhoneNo"
+    t.string   "MobileNo"
+    t.string   "ZipCode"
+    t.string   "Address"
+    t.integer  "iWeight"
+    t.string   "Name1"
+    t.string   "Cnt1"
+    t.integer  "iPrice"
+    t.string   "Memo"
+    t.integer  "iPage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

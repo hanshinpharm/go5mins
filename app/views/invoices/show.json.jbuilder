@@ -1,0 +1,1 @@
+json.extract! @invoice, :id, :DateSent, :DatePage, :NumEY, :OrderNo, :AccCode, :PrdName, :OwnerName, :PhoneNo, :MobileNo, :ZipCode, :Address, :iWeight, :Name1, :Cnt1, :iPrice, :Memo, :iPage, :created_at, :updated_at

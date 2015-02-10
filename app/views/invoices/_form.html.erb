@@ -1,0 +1,85 @@
+<%= form_for(@invoice) do |f| %>
+  <% if @invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+      <% @invoice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DateSent %><br>
+    <%= f.text_field :DateSent %>
+  </div>
+  <div class="field">
+    <%= f.label :DatePage %><br>
+    <%= f.text_field :DatePage %>
+  </div>
+  <div class="field">
+    <%= f.label :NumEY %><br>
+    <%= f.text_field :NumEY %>
+  </div>
+  <div class="field">
+    <%= f.label :OrderNo %><br>
+    <%= f.text_field :OrderNo %>
+  </div>
+  <div class="field">
+    <%= f.label :AccCode %><br>
+    <%= f.text_field :AccCode %>
+  </div>
+  <div class="field">
+    <%= f.label :PrdName %><br>
+    <%= f.text_field :PrdName %>
+  </div>
+  <div class="field">
+    <%= f.label :OwnerName %><br>
+    <%= f.text_field :OwnerName %>
+  </div>
+  <div class="field">
+    <%= f.label :PhoneNo %><br>
+    <%= f.text_field :PhoneNo %>
+  </div>
+  <div class="field">
+    <%= f.label :MobileNo %><br>
+    <%= f.text_field :MobileNo %>
+  </div>
+  <div class="field">
+    <%= f.label :ZipCode %><br>
+    <%= f.text_field :ZipCode %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :iWeight %><br>
+    <%= f.number_field :iWeight %>
+  </div>
+  <div class="field">
+    <%= f.label :Name1 %><br>
+    <%= f.text_field :Name1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Cnt1 %><br>
+    <%= f.text_field :Cnt1 %>
+  </div>
+  <div class="field">
+    <%= f.label :iPrice %><br>
+    <%= f.number_field :iPrice %>
+  </div>
+  <div class="field">
+    <%= f.label :Memo %><br>
+    <%= f.text_field :Memo %>
+  </div>
+  <div class="field">
+    <%= f.label :iPage %><br>
+    <%= f.number_field :iPage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

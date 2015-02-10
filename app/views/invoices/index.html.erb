@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datesent</th>
+      <th>Datepage</th>
+      <th>Numey</th>
+      <th>Orderno</th>
+      <th>Acccode</th>
+      <th>Prdname</th>
+      <th>Ownername</th>
+      <th>Phoneno</th>
+      <th>Mobileno</th>
+      <th>Zipcode</th>
+      <th>Address</th>
+      <th>Iweight</th>
+      <th>Name1</th>
+      <th>Cnt1</th>
+      <th>Iprice</th>
+      <th>Memo</th>
+      <th>Ipage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.DateSent %></td>
+        <td><%= invoice.DatePage %></td>
+        <td><%= invoice.NumEY %></td>
+        <td><%= invoice.OrderNo %></td>
+        <td><%= invoice.AccCode %></td>
+        <td><%= invoice.PrdName %></td>
+        <td><%= invoice.OwnerName %></td>
+        <td><%= invoice.PhoneNo %></td>
+        <td><%= invoice.MobileNo %></td>
+        <td><%= invoice.ZipCode %></td>
+        <td><%= invoice.Address %></td>
+        <td><%= invoice.iWeight %></td>
+        <td><%= invoice.Name1 %></td>
+        <td><%= invoice.Cnt1 %></td>
+        <td><%= invoice.iPrice %></td>
+        <td><%= invoice.Memo %></td>
+        <td><%= invoice.iPage %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>

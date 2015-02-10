@@ -11,7 +11,7 @@ class ExosController < ApplicationController
   # GET /exos
   # GET /exos.json
   def index
-    @exos = Exo.all
+    @exos = Exo.order("PrdName").all
   end
 
   # GET /exos/1
