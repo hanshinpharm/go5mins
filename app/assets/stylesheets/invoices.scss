@@ -1,3 +1,19 @@
 // Place all the styles related to the Invoices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div {
+  page-break-after: always;
+}
+.header td {font-family: "아리따-돋움(TTF)-Bold";
+  font-size: 18px;}
+.font1 td {
+  font-family: "아리따-돋움(TTF)-Bold";
+  font-size: 18px;
+}
+
+.font2 {
+  font-size: 60px;
+  font-family: "나눔고딕";
+  font-weight: bold;
+}
+
